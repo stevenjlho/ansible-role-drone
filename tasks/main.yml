@@ -1,0 +1,33 @@
+---
+# tasks file for stevenjlho.drone
+
+- name: Check volume directory if exist.
+  become: yes
+  stat:
+    path: "{{ item }}"
+  register: volume
+  with_items: "{{ drone_volume_directory }}"
+
+- name: Create volume directory.
+  become: yes
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  when: "{{ not item.stat.exists }}"
+  with_items: "{{ volume.results }}"
+
+
+- name: Run a Drone Container.
+  become: yes
+  docker_container:
+    name: drone
+    state: started
+    image: "drone/drone:{{ drone_version }}"
+    pull: true
+    volumes: "{{ drone_docker_volume }}"
+    published_ports: "{{ drone_http_port }}:8000"
+    restart_policy: always
+    env:
+      REMOTE_DRIVER: "{{ drone_remote_driver }}"
+      REMOTE_CONFIG: "{{ drone_remote_config }}"

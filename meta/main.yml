@@ -1,0 +1,20 @@
+---
+galaxy_info:
+  author: Steven Ho
+  description: Ansible role for drone
+  company: Amwares
+  license: license (MIT)
+  min_ansible_version: 2.1
+  platforms:
+    - name: Ubuntu
+      versions:
+        - precise
+        - raring
+        - saucy
+        - trusty
+  categories:
+    - development
+    - packaging
+    - system
+dependencies:
+  - angstwad.docker_ubuntu

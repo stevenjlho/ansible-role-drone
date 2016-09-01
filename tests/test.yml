@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  vars:
+    php_enable_webserver: false
+    php_install_from_source: true
+  roles:
+    - angstwad.docker_ubuntu
+    - ansible-role-drone

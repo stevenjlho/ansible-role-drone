@@ -1,0 +1,8 @@
+---
+drone_volume_directory:
+  - "/var/lib/drone"
+  - "/var/run"
+
+drone_docker_volume:
+  - "/var/lib/drone:/var/lib/drone"
+  - "/var/run/docker.sock:/var/run/docker.sock"

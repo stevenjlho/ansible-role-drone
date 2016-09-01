@@ -1,0 +1,7 @@
+---
+# defaults file for stevenjlho.drone
+drone_version: "0.4"
+drone_http_port: "8081"
+
+drone_remote_driver: gogs
+drone_remote_config: ""
