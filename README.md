@@ -21,7 +21,7 @@ The http port of drone.
     drone_remote_config: ""
 Configuring a Remote Driver. Please read drone document about [remote drive](http://readme.drone.io/setup/remotes/).
     
-Role Variables
+Todo
 --------------
 
 * The implement of [select and configure a database](http://readme.drone.io/setup/database/).
