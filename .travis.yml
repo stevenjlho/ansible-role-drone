@@ -21,7 +21,6 @@ install:
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
-
   # Install Deployer dependence
   - ansible-galaxy install angstwad.docker_ubuntu -p ../
 script:
