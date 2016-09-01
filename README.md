@@ -24,7 +24,7 @@ Configuring a Remote Driver. Please read drone document about [remote drive](htt
 Todo
 --------------
 
-* The implement of [select and configure a database](http://readme.drone.io/setup/database/).
+* Implement [select and configure a database](http://readme.drone.io/setup/database/).
 * Use `env_file` options instead of `env` options to run a docker container.
 
 Dependencies
